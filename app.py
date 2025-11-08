@@ -4,6 +4,17 @@ from typing import Optional, Dict, Any
 from flask import Flask, request, jsonify, render_template
 
 from difflib import SequenceMatcher
+from dotenv import load_dotenv
+import os
+
+# Option A: default - loads .env in current working directory
+load_dotenv()
+
+# Option B: explicit path (use this if you run the app from elsewhere)
+# load_dotenv(dotenv_path="/root/Nichirin/.env")
+
+# then later:
+api_key = os.getenv("GEMINI_API_KEY")
 
 # Attempt to import Google GenAI client; allow running UI without it for debugging.
 try:
