@@ -1,3 +1,4 @@
 Flask>=2.2
 gunicorn
 google-genai>=0.1.0
+dotenv
